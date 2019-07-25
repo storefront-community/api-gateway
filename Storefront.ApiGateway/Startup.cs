@@ -2,8 +2,8 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Storefront.ApiGateway.Authorization;
 
 namespace Storefront.ApiGateway
 {
@@ -18,7 +18,7 @@ namespace Storefront.ApiGateway
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddOcelot(_configuration);
+            services.AddDefaultCorsPolicy();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
