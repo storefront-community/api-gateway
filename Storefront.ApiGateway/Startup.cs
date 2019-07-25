@@ -31,7 +31,7 @@ namespace Storefront.ApiGateway
 
             services.AddDbContext<ApiDbContext>(options =>
             {
-                options.UseNpgsql(_configuration["PostgreSQL:ConnectionString"], pgsql =>
+                options.UseNpgsql(_configuration["ConnectionString:PostgreSQL"], pgsql =>
                 {
                     pgsql.MigrationsHistoryTable(tableName: "__migration_history", schema: ApiDbContext.Schema);
                 });
