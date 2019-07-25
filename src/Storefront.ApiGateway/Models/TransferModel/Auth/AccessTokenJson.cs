@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Storefront.ApiGateway.Models.TransferModel.Auth
 {
-    public sealed class ReadAccessTokenJson : IActionResult
+    public sealed class AccessTokenJson : IActionResult
     {
-        public ReadAccessTokenJson() { }
+        public AccessTokenJson() { }
 
-        public ReadAccessTokenJson(string token)
+        public AccessTokenJson(string token)
         {
             Token = token;
         }
