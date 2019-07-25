@@ -47,6 +47,7 @@ namespace Storefront.ApiGateway
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors();
             app.UseAuthentication();
             app.UseMvc();
             app.UseOcelot().Wait();
