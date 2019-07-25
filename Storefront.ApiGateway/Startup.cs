@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Storefront.ApiGateway.Authorization;
 using Storefront.ApiGateway.Models.DataModel;
@@ -35,6 +36,8 @@ namespace Storefront.ApiGateway
                     pgsql.MigrationsHistoryTable(tableName: "__migration_history", schema: ApiDbContext.Schema);
                 });
             });
+
+            services.AddOcelot(_configuration);
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
