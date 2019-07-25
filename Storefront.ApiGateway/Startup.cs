@@ -18,6 +18,8 @@ namespace Storefront.ApiGateway
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
+
             services.AddDefaultCorsPolicy();
         }
 
@@ -28,6 +30,7 @@ namespace Storefront.ApiGateway
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseMvc();
             app.UseOcelot().Wait();
         }
     }
