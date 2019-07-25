@@ -20,6 +20,8 @@ namespace Storefront.ApiGateway
         {
             services.AddMvc();
 
+            services.AddJwtAuthentication(_configuration.GetSection("Auth"));
+
             services.AddDefaultCorsPolicy();
         }
 
