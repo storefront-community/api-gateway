@@ -1,8 +1,6 @@
 # Storefront API Gateway
 
-Entry point for the following Storefront microservices:
-- _Auth API_
-- [Orders API](https://github.com/storefront-community/orders-api)
+Entry point for all services and authentication provider.
 
 ## How to debug locally
 
